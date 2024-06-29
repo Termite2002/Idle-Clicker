@@ -6,6 +6,9 @@ using TMPro;
 
 public class CarrotManager : MonoBehaviour
 {
+    public static CarrotManager instance;
+
+
     [Header("Elements")]
     [SerializeField] private TextMeshProUGUI carrotsText;
 
@@ -17,6 +20,13 @@ public class CarrotManager : MonoBehaviour
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
+        if (instance == null)
+            instance = this;
+        else
+            Destroy(gameObject);
+
         LoadData();
 
         carrotIncrement = 1;
@@ -36,6 +46,34 @@ public class CarrotManager : MonoBehaviour
         Carrot.onFrenzyModeStopped -= FrenzyModeStoppedCallback;
     }
 
+    public bool TryPurchase(double price)
+    {
+        if (price <= totalCarrotsCount)
+        {
+            totalCarrotsCount -= price;
+            return true;
+        }
+        return false;
+    }
+
+    public void AddCarrots(double value)
+    {
+        totalCarrotsCount += value;
+
+        UpdateCarrotsText();
+
+        SaveData();
+    }
+
+    public void AddCarrots(float value)
+    {
+        totalCarrotsCount += value;
+
+        UpdateCarrotsText();
+
+        SaveData();
+    }
+
     private void CarrotClickedCallback()
     {
         totalCarrotsCount += carrotIncrement;
@@ -46,7 +84,7 @@ public class CarrotManager : MonoBehaviour
     }
     private void UpdateCarrotsText()
     {
-        carrotsText.text = totalCarrotsCount + " Carrots!";
+        carrotsText.text = totalCarrotsCount.ToString("F0") + " Carrots!";
     }
 
     private void FrenzyModeStartedCallback()
