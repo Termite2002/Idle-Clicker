@@ -73,6 +73,8 @@ public class CarrotManager : MonoBehaviour
 
     private void CarrotClickedCallback()
     {
+        AudioManager.instance.Play("ClickCarrot");
+
         totalCarrotsCount += carrotIncrement;
 
         UpdateCarrotsText();

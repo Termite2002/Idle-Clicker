@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 899092845, guid: d7d3ce93bfb484c429cf1e3a6f7a0307, type: 3}
   title: PandaClicker
-  cpsPerLevel: 150
-  basePrice: 78500
+  cpsPerLevel: 9000
+  basePrice: 3000000
   coefficient: 1.18

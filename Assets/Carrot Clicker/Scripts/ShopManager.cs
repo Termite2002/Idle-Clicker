@@ -52,7 +52,7 @@ public class ShopManager : MonoBehaviour
         Sprite icon = upgrade.icon;
         string title = upgrade.title;
         string subtitle = string.Format("lvl {0} (+{1} Cps)", upgradeLevel, upgrade.cpsPerLevel);
-        string price = upgrade.GetPrice(upgradeLevel).ToString("F0");
+        string price = DoubleUtilities.ToScientificNotation(upgrade.GetPrice(upgradeLevel));
 
         upgradeButtonInstance.Configure(icon, title, subtitle, price);
 
@@ -62,9 +62,13 @@ public class ShopManager : MonoBehaviour
     private void UpgradeButtonClickCallback(int upgradeIndex)
     {
         if (CarrotManager.instance.TryPurchase(GetUpgradePrice(upgradeIndex)))
+        {
+            AudioManager.instance.Play("Buy");
             IncreaseUpgradeLevel(upgradeIndex);
+        }
         else
-            Debug.Log("Cant'");
+            AudioManager.instance.Play("Poor");
+            //Debug.Log("Cant'");
     }
 
     private void IncreaseUpgradeLevel(int upgradeIndex)
@@ -89,7 +93,7 @@ public class ShopManager : MonoBehaviour
 
 
         string subtitle = string.Format("lvl {0} (+{1} Cps)", upgradeLevel, upgrade.cpsPerLevel);
-        string price = upgrade.GetPrice(upgradeLevel).ToString("F0");
+        string price = DoubleUtilities.ToScientificNotation(upgrade.GetPrice(upgradeLevel));
 
         upgradeButton.UpdateVisuals(subtitle, price);
     }

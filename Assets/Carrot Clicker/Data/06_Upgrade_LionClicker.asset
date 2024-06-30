@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1577293448, guid: d7d3ce93bfb484c429cf1e3a6f7a0307, type: 3}
   title: LionClicker
-  cpsPerLevel: 55
-  basePrice: 30000
+  cpsPerLevel: 95
+  basePrice: 76000
   coefficient: 1.15

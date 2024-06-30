@@ -13,9 +13,14 @@ public class OfflineEarningManager : MonoBehaviour
     [SerializeField] private int maxOfflineSeconds;
     private DateTime lastDateTime;
 
-    private void Start()
+    private void Awake()
     {
         offlineEarningUI = GetComponent<OfflineEarningUI>();
+        
+    }
+
+    private void Start()
+    {
 
         if (LoadLastDateTime())
             CalculateOfflineSeconds();

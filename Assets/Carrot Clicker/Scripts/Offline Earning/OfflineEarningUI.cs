@@ -28,6 +28,8 @@ public class OfflineEarningUI : MonoBehaviour
 
     private void ClaimEarning(double earning)
     {
+        AudioManager.instance.Play("Buy");
+
         LeanTween.scale(panelPopup, Vector3.zero, 0.3f).setEaseInBack()
             .setOnComplete(() => popup.gameObject.SetActive(false));
         

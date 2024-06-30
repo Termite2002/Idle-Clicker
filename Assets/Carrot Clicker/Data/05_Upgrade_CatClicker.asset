@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -1190958727, guid: d7d3ce93bfb484c429cf1e3a6f7a0307, type: 3}
   title: CatClicker
-  cpsPerLevel: 27
-  basePrice: 18200
+  cpsPerLevel: 75
+  basePrice: 42500
   coefficient: 1.14

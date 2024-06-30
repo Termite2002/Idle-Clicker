@@ -22,12 +22,16 @@ public class UIShopManager : MonoBehaviour
 
     public void Open()
     {
+        AudioManager.instance.Play("Shop");
+
         colliderCarrot.enabled = false;
         LeanTween.cancel(shopPanel);
         LeanTween.move(shopPanel, openedPosition, 0.3f).setEase(LeanTweenType.easeInOutSine);
     }
     public void Close()
     {
+        AudioManager.instance.Play("Shop");
+
         colliderCarrot.enabled = true;
         LeanTween.cancel(shopPanel);
         LeanTween.move(shopPanel, closedPosition, 0.3f).setEase(LeanTweenType.easeInOutSine);

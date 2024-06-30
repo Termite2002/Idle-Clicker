@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: -1195553379, guid: d7d3ce93bfb484c429cf1e3a6f7a0307, type: 3}
   title: DinosaurClicker
-  cpsPerLevel: 200
-  basePrice: 93000
+  cpsPerLevel: 17030
+  basePrice: 30000601
   coefficient: 1.19

@@ -4365,7 +4365,7 @@ MonoBehaviour:
   soundsBGM:
   - name: BGM01
     clip: {fileID: 8300000, guid: 475f4837af487ce4a9e68bb227455e4c, type: 3}
-    volume: 0.69
+    volume: 0.624
     volumeVariance: 0.581
     pitch: 0.8
     pitchVariance: 0.246
@@ -4374,7 +4374,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BGM02
     clip: {fileID: 8300000, guid: 90eae78e8ce85a849b5b0ca11b2de641, type: 3}
-    volume: 0.69
+    volume: 0.629
     volumeVariance: 0.581
     pitch: 0.8
     pitchVariance: 0.246
@@ -4383,7 +4383,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BGM03
     clip: {fileID: 8300000, guid: 47f45ef7b5767674393cc401fc325705, type: 3}
-    volume: 0.69
+    volume: 0.608
     volumeVariance: 0.581
     pitch: 0.8
     pitchVariance: 0.246
@@ -4392,14 +4392,50 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: BGM04
     clip: {fileID: 8300000, guid: 1532c7e67c2d60c4c8780da14b7e8fcf, type: 3}
-    volume: 0.69
+    volume: 0.597
     volumeVariance: 0.581
     pitch: 0.8
     pitchVariance: 0.246
     loop: 1
     mixerGroup: {fileID: 1171511746993941510, guid: aabac4c90108a84468d2791d7c6c4978, type: 2}
     source: {fileID: 0}
-  sounds: []
+  sounds:
+  - name: ClickCarrot
+    clip: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
+    volume: 0.511
+    volumeVariance: 0.376
+    pitch: 0.71
+    pitchVariance: 0.226
+    loop: 0
+    mixerGroup: {fileID: -1834080989983363573, guid: aabac4c90108a84468d2791d7c6c4978, type: 2}
+    source: {fileID: 0}
+  - name: Shop
+    clip: {fileID: 8300000, guid: 6e8772b49f34d402a90016ed445d8a2f, type: 3}
+    volume: 0.719
+    volumeVariance: 0.601
+    pitch: 0.87
+    pitchVariance: 0.271
+    loop: 0
+    mixerGroup: {fileID: -1834080989983363573, guid: aabac4c90108a84468d2791d7c6c4978, type: 2}
+    source: {fileID: 0}
+  - name: Buy
+    clip: {fileID: 8300000, guid: 29bde6326b4c34ad8a12da475f79b50a, type: 3}
+    volume: 0.988
+    volumeVariance: 0.929
+    pitch: 1.28
+    pitchVariance: 0.359
+    loop: 0
+    mixerGroup: {fileID: -1834080989983363573, guid: aabac4c90108a84468d2791d7c6c4978, type: 2}
+    source: {fileID: 0}
+  - name: Poor
+    clip: {fileID: 8300000, guid: 7e9ee6dc04a5d40d1a5dfc4beb9865e7, type: 3}
+    volume: 0.719
+    volumeVariance: 0.601
+    pitch: 0.87
+    pitchVariance: 0.271
+    loop: 0
+    mixerGroup: {fileID: -1834080989983363573, guid: aabac4c90108a84468d2791d7c6c4978, type: 2}
+    source: {fileID: 0}
 --- !u!1 &2092919096
 GameObject:
   m_ObjectHideFlags: 0
