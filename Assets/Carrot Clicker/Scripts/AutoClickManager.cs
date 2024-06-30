@@ -16,7 +16,7 @@ public class AutoClickManager : MonoBehaviour
 
     [Header("Data")]
     [SerializeField] private int level;
-    [SerializeField] private float carrotsPerSecond;
+    //[SerializeField] private float carrotsPerSecond;
 
     private void Awake()
     {
@@ -31,9 +31,9 @@ public class AutoClickManager : MonoBehaviour
     {
         LoadData();
 
-        carrotsPerSecond = level * 0.1f;
+        //carrotsPerSecond = level * 0.1f;
 
-        InvokeRepeating(nameof(AddCarrots), 1, 1);
+        //InvokeRepeating(nameof(AddCarrots), 1, 1);
 
         SpawnBunnies();
 
@@ -76,15 +76,15 @@ public class AutoClickManager : MonoBehaviour
         }
     }
 
-    private void AddCarrots()
-    {
-        CarrotManager.instance.AddCarrots(carrotsPerSecond);
-    }
+    //private void AddCarrots()
+    //{
+    //    CarrotManager.instance.AddCarrots(carrotsPerSecond);
+    //}
 
     public void Upgrade()
     {
         level++;
-        carrotsPerSecond = level * 0.1f;
+        //carrotsPerSecond = level * 0.1f;
 
 
         if (level <= 36)

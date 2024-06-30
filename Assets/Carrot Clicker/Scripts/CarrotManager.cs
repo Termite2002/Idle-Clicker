@@ -46,6 +46,7 @@ public class CarrotManager : MonoBehaviour
         Carrot.onFrenzyModeStopped -= FrenzyModeStoppedCallback;
     }
 
+
     public bool TryPurchase(double price)
     {
         if (price <= totalCarrotsCount)
@@ -67,11 +68,7 @@ public class CarrotManager : MonoBehaviour
 
     public void AddCarrots(float value)
     {
-        totalCarrotsCount += value;
-
-        UpdateCarrotsText();
-
-        SaveData();
+        AddCarrots((double)value);
     }
 
     private void CarrotClickedCallback()
@@ -84,7 +81,7 @@ public class CarrotManager : MonoBehaviour
     }
     private void UpdateCarrotsText()
     {
-        carrotsText.text = totalCarrotsCount.ToString("F0") + " Carrots!";
+        carrotsText.text = DoubleUtilities.ToScientificNotation(totalCarrotsCount) + " Carrots!";
     }
 
     private void FrenzyModeStartedCallback()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 01_Upgrade_PigClicker
   m_EditorClassIdentifier: 
   icon: {fileID: 412377721, guid: d7d3ce93bfb484c429cf1e3a6f7a0307, type: 3}
-  title: PigClicker
+  title: PiggyClicker
   cpsPerLevel: 0.5
   basePrice: 500
   coefficient: 1.09
